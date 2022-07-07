@@ -12,14 +12,18 @@ fun main() {
         Regex("([\\d|[a-zA-Z]]*\\s*([*/^]|[+]+|-{1,3})\\s*[\\d|[a-zA-Z]]+\\s*)*([\\d|[a-zA-Z]]*\\s*([*/]|[+]+|-{1,3})\\s*[(][\\d|[a-zA-Z]]+\\s*([*/^]|[+]+|-{1,3})\\s*[\\d|[a-zA-Z]]+[)])*(\\s*([*/^]|[+]+|-{1,3})\\s*\\d+\\s*)?")
 
 
-    if (str2.matches(regex2)) {
+    if (str3.matches(regex2)) {
         // println(str3.replace(" ", ""))
         val regex = Regex("[(]\\s*\\d+\\s*[-+]\\s*\\d+\\s*[)]")
         val regex5 = Regex("[(]?[(]\\s*\\d+\\s*[-+]\\s*\\d+\\s*[)]\\s*[-+]\\s*\\s*\\d+\\s*[-+]\\s*\\d+\\s*[)]?")
 
         val teste = regex5.find(str3)?.value.toString()
+        val teste2 = regex.find(teste)?.value.toString()
 
+        //println(str3.matches(regex5))
+        //println(str3.replace(teste, ",e,"))
         println(str3)
-        println(str3.replace(teste, ",e,"))
+        println(teste.replace(teste2, "e, ").replace("(", "").replace(")", ""))
+        println(teste2.replace("(", "").replace(")", ""))
     } else println("Error")
 }
