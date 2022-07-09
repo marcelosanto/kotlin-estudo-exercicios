@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="problem of today okey">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/SmartCalcRegexFun.kt" afterDir="false" />
+    <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="trabalhando no regex">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/TheLongestWord.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercicios/RegexFun2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/RegexFun2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercicios/SmartCalcRegexFun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/SmartCalcRegexFun.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +79,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquaresOfNaturalNumbersKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercicios.SquaresOfNaturalNumbersKt" />
+    <configuration name="TheLongestWordKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.TheLongestWordKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration name="main" type="JetRunConfigurationType">
@@ -97,19 +96,19 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.main" />
+      <item itemvalue="Kotlin.TheLongestWordKt" />
       <item itemvalue="Kotlin.SmartCalcRegexFunKt" />
       <item itemvalue="Kotlin.ProblemOfTodayKt" />
       <item itemvalue="Kotlin.RegexFun2Kt" />
       <item itemvalue="Kotlin.RegexFunKt" />
-      <item itemvalue="Kotlin.SquaresOfNaturalNumbersKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.SmartCalcRegexFunKt" />
+        <item itemvalue="Kotlin.TheLongestWordKt" />
         <item itemvalue="Kotlin.RegexFun2Kt" />
         <item itemvalue="Kotlin.ProblemOfTodayKt" />
         <item itemvalue="Kotlin.RegexFunKt" />
-        <item itemvalue="Kotlin.SquaresOfNaturalNumbersKt" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654360448959</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="trabalhando no regex">
+      <created>1657210537472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657210537472</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +167,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="calculadora usando regex" />
     <MESSAGE value="problem of today okey" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem of today okey" />
+    <MESSAGE value="trabalhando no regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="trabalhando no regex" />
   </component>
 </project>
