@@ -2,12 +2,14 @@ package src.main.kotlin.exercicios
 
 
 fun main() {
-    val cont = "3 + 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1)"
+    val cont = "3 + (2 + 1"
     val conta = "2 - 2 + 3"
 
+    //val withParentheses = Regex("(^\\d+\\s*(\\+|-|\\*|/)\\s*\\d+)+")
 
-    println(calculatorFunction(cont))
-    println(calculatorFunction(conta))
+    //println(cont.matches(withParentheses))
+    //println(withParentheses.find(cont)?.value)
+    println(calculatorFunction("3 + 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1)"))
 
 }
 
@@ -18,9 +20,12 @@ fun calculatorFunction(str: String): String {
 
     while (true) {
         if (withParentheses.find(result)?.value != null) {
-            result = sumWithParentheses(result)
+            result = sumWithParentheses(result, withParentheses)
         } else if (noParentheses.find(result)?.value != null) {
             result = calcNumbers(result)
+        } else if (withParentheses.find(result)?.value == null && noParentheses.find(result)?.value == null) {
+            result = "Invalid expression"
+            break
         } else {
             break
         }
@@ -79,8 +84,8 @@ private fun function(): (Int, Int, String) -> Int {
     return calculator
 }
 
-fun sumWithParentheses(str: String): String {
-    val parents = "(\\(\\s*\\d+\\s*(\\+|-|\\*|/)\\s*\\d+\\s*(\\+|-|\\*|/)?\\s*\\d*\\s*\\))".toRegex().find(str)?.value
+fun sumWithParentheses(str: String, regex: Regex): String {
+    val parents = regex.find(str)?.value
 
     var parentes = parents?.replace("(", "")?.replace(")", "").let { calcNumbers(it!!) }
 
@@ -90,3 +95,4 @@ fun sumWithParentheses(str: String): String {
 
     return str.replace(parents!!, parentes)
 }
+
