@@ -3,25 +3,24 @@ package src.main.kotlin.exercicios
 
 fun main() {
     val cont = "3 + 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1)"
-    val conta = "8 * 3 + 12 * (4 - 2)"
-    val conta2 = "(7 * 2 + 1)"
-    //println(chameFuncao(cont))
-    //println(chameFuncao(conta2))
+    val conta = "2 - 2 + 3"
+
+
+    println(calculatorFunction(cont))
+    println(calculatorFunction(conta))
 
 }
 
-fun chameFuncao(str: String): String {
-    val regex = Regex("(^\\d+\\s*(\\+|-|\\*|/)\\s*\\d+)+")
-    val regex2 = Regex("(\\(\\s*\\d+\\s*(\\+|-|\\*|/)\\s*\\d+\\s*(\\+|-|\\*|/)?\\s*\\d*\\s*\\))")
+fun calculatorFunction(str: String): String {
+    val noParentheses = Regex("(^\\d+\\s*(\\+|-|\\*|/)\\s*\\d+)+")
+    val withParentheses = Regex("(\\(\\s*\\d+\\s*(\\+|-|\\*|/)\\s*\\d+\\s*(\\+|-|\\*|/)?\\s*\\d*\\s*\\))")
     var result = str
 
     while (true) {
-        if (regex2.find(result)?.value != null) {
-            result = resolverParenteses(result)
-            println("parentes: $result")
-        } else if (regex.find(result)?.value != null) {
+        if (withParentheses.find(result)?.value != null) {
+            result = sumWithParentheses(result)
+        } else if (noParentheses.find(result)?.value != null) {
             result = calcNumbers(result)
-            println("normal: $result")
         } else {
             break
         }
@@ -31,67 +30,63 @@ fun chameFuncao(str: String): String {
 }
 
 fun calcNumbers(numbers: String): String {
-    println("nbr: $numbers")
     var calcTemp = 0
     var result = ""
 
-    val str = numbers
-
-    val regexMult = Regex("\\d+\\s*\\*\\s*\\d+")
+    val regexMulti = Regex("\\d+\\s*\\*\\s*\\d+")
     val regexDiv = Regex("\\d+\\s*/\\s*\\d+")
     val regexSub = Regex("\\d+\\s*-\\s*\\d+")
     val regexSum = Regex("\\d+\\s*\\+\\s*\\d+")
 
-    val calculadora: (Int, Int, String) -> Int = { numero1: Int, numero2: Int, operacao: String ->
-        when (operacao) {
-            "+" -> numero1 + numero2
-            "-" -> numero1 - numero2
-            "*" -> numero1 * numero2
-            "/" -> numero1 / numero2
-            else -> 0
-        }
-    }
+    val calculator: (Int, Int, String) -> Int = function()
 
-    if (regexMult.find(str)?.value != null) {
-        val teste = regexMult.find(str)?.value?.split(" ")?.toMutableList()
-        val temp = regexMult.find(str)?.value
+    if (regexMulti.find(numbers)?.value != null) {
+        val teste = regexMulti.find(numbers)?.value?.split(" ")?.toMutableList()
+        val temp = regexMulti.find(numbers)?.value
+        calcTemp = teste?.let { calculator(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
+        result = numbers.replace(temp!!, calcTemp.toString())
 
-        calcTemp = teste?.let { calculadora(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
-
-        result = str.replace(temp!!, calcTemp.toString())
-
-    } else if (regexDiv.find(str)?.value != null) {
-        val teste = regexDiv.find(str)?.value?.split(" ")?.toMutableList()
-        val temp = regexDiv.find(str)?.value
-        calcTemp = teste?.let { calculadora(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
-        result = str.replace(temp!!, calcTemp.toString())
-    } else if (regexSub.find(str)?.value != null) {
-        val teste = regexSub.find(str)?.value?.split(" ")?.toMutableList()
-        val temp = regexSub.find(str)?.value
-        calcTemp = teste?.let { calculadora(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
-        result = str.replace(temp!!, calcTemp.toString())
-    } else if (regexSum.find(str)?.value != null) {
-        val teste = regexSum.find(str)?.value?.split(" ")?.toMutableList()
-        val temp = regexSum.find(str)?.value
-        calcTemp = teste?.let { calculadora(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
-        result = str.replace(temp!!, calcTemp.toString())
+    } else if (regexDiv.find(numbers)?.value != null) {
+        val teste = regexDiv.find(numbers)?.value?.split(" ")?.toMutableList()
+        val temp = regexDiv.find(numbers)?.value
+        calcTemp = teste?.let { calculator(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
+        result = numbers.replace(temp!!, calcTemp.toString())
+    } else if (regexSub.find(numbers)?.value != null) {
+        val teste = regexSub.find(numbers)?.value?.split(" ")?.toMutableList()
+        val temp = regexSub.find(numbers)?.value
+        calcTemp = teste?.let { calculator(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
+        result = numbers.replace(temp!!, calcTemp.toString())
+    } else if (regexSum.find(numbers)?.value != null) {
+        val teste = regexSum.find(numbers)?.value?.split(" ")?.toMutableList()
+        val temp = regexSum.find(numbers)?.value
+        calcTemp = teste?.let { calculator(teste[0].toInt(), teste[2].toInt(), teste[1]) }!!
+        result = numbers.replace(temp!!, calcTemp.toString())
     }
 
     return result
 }
 
-fun resolverParenteses(str: String): String {
-    val conta = str
-    val parents = "(\\(\\s*\\d+\\s*(\\+|-|\\*|/)\\s*\\d+\\s*(\\+|-|\\*|/)?\\s*\\d*\\s*\\))".toRegex().find(conta)?.value
-    println("prt: $parents")
+private fun function(): (Int, Int, String) -> Int {
+    val calculator: (Int, Int, String) -> Int = { number01: Int, number02: Int, operation: String ->
+        when (operation) {
+            "+" -> number01 + number02
+            "-" -> number01 - number02
+            "*" -> number01 * number02
+            "/" -> number01 / number02
+            else -> 0
+        }
+    }
+    return calculator
+}
 
-    var parentes = parents?.replace("(", "")?.replace(")", "")
+fun sumWithParentheses(str: String): String {
+    val parents = "(\\(\\s*\\d+\\s*(\\+|-|\\*|/)\\s*\\d+\\s*(\\+|-|\\*|/)?\\s*\\d*\\s*\\))".toRegex().find(str)?.value
 
-    val replace = conta.replace(parents!!, calcNumbers(parentes!!))
+    var parentes = parents?.replace("(", "")?.replace(")", "").let { calcNumbers(it!!) }
 
-    println("rpl: $replace")
+    if (parentes.split(" ").toMutableList().size > 1) {
+        parentes = "($parentes)"
+    }
 
-    return replace
-
-
+    return str.replace(parents!!, parentes)
 }
