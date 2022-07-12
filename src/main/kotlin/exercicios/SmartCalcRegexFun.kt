@@ -14,13 +14,43 @@ fun main() {
         } else if (letras.find(str)?.value != null && "/[a-zA-Z]".toRegex().find(str)?.value == null) {
             if ("=".toRegex().find(str)?.value != null) {
                 val (x, y) = str.replace("\\s*".toRegex(), "").split("=")
-                listDeVariaveis[x] = y.toInt()
-                println(listDeVariaveis)
+                if (listDeVariaveis[y] != null) {
+                    listDeVariaveis[x] = listDeVariaveis[y]!!.toInt()
+                } else listDeVariaveis[x] = y.toInt()
             } else {
-                if (listDeVariaveis[str] != null) println(listDeVariaveis[str])
-                else println("Unknown variable")
+                val regex = Regex("[a-zA-z]+")
+                val matches = regex.findAll(str)
+                val lettersVariables = matches.map { it.groupValues[0] }.toMutableList()
+
+                var text = str
+
+                for (i in lettersVariables.iterator()) {
+                    text = if (listDeVariaveis[i] != null) {
+                        text.replace(i, listDeVariaveis[i].toString())
+                    } else {
+                        "Unknown variable"
+                    }
+                }
+                if (regex.find(text)?.value == null) {
+                    println(calculatorFunction(text))
+                } else println(text)
             }
-        } else if ("/[a-zA-Z]".toRegex().find(str)?.value != null) break
+        } else if ("/[a-zA-Z]".toRegex().find(str)?.value != null) {
+            when (str) {
+                "/exit" -> {
+                    println("bye")
+                    break
+                }
+                "/help" -> {
+                    println("The program calculates the sum of numbers")
+                    continue
+                }
+                else -> {
+                    println("Unknown command")
+                    continue
+                }
+            }
+        }
     }
 
 }
@@ -28,19 +58,19 @@ fun main() {
 fun formatMultipleSigns(calculatorNumbers: String): String {
     val multipleSigns = Regex("[+|-]{2,}")
 
-    var tempNumbersMutiplySings = calculatorNumbers
+    var tempNumbersMultipleSings = calculatorNumbers
 
-    if (multipleSigns.find(tempNumbersMutiplySings)?.value != null) {
-        val temp = multipleSigns.find(tempNumbersMutiplySings)?.value
+    if (multipleSigns.find(tempNumbersMultipleSings)?.value != null) {
+        val temp = multipleSigns.find(tempNumbersMultipleSings)?.value
 
-        if (temp!!.matches("-+".toRegex())) {
+        tempNumbersMultipleSings = if (temp!!.matches("-+".toRegex())) {
             if (temp!!.length % 2 == 0) {
-                tempNumbersMutiplySings = tempNumbersMutiplySings.replace(temp, "+")
-            } else tempNumbersMutiplySings = tempNumbersMutiplySings.replace(temp, "-")
-        } else tempNumbersMutiplySings = tempNumbersMutiplySings.replace(temp, "+")
+                tempNumbersMultipleSings.replace(temp, "+")
+            } else tempNumbersMultipleSings.replace(temp, "-")
+        } else tempNumbersMultipleSings.replace(temp, "+")
     }
 
-    return tempNumbersMutiplySings
+    return tempNumbersMultipleSings
 }
 
 fun calculatorFunction(str: String): String {
@@ -50,7 +80,12 @@ fun calculatorFunction(str: String): String {
     var result = str
 
     while (true) {
-        if (multipleSigns.find(result)?.value != null) {
+        if ("[*/^]{2,}".toRegex().find(result)?.value != null || "[(]".toRegex()
+                .find(result)?.value != null && "[)]".toRegex().find(result)?.value == null || "[(]".toRegex()
+                .find(result)?.value == null && "[)]".toRegex().find(result)?.value != null
+        ) {
+            result = "Invalid expression"
+        } else if (multipleSigns.find(result)?.value != null) {
             result = formatMultipleSigns(result)
         } else if (withParentheses.find(result)?.value != null) {
             result = sumWithParentheses(result, withParentheses)
@@ -71,6 +106,7 @@ fun calcNumbers(numbers: String): String {
     val regexMulti = Regex("-?\\d+\\s*\\*\\s*\\d+")
     val regexDiv = Regex("-?\\d+\\s*/\\s*\\d+")
     val regexElev = Regex("-?\\d+\\s*\\^\\s*\\d+")
+
 
     val calculator: (Int, Int, String) -> Int = function()
 
@@ -104,7 +140,6 @@ fun calcNumbers(numbers: String): String {
 
         result = listInt.sum().toString()
     }
-
     return result
 }
 
