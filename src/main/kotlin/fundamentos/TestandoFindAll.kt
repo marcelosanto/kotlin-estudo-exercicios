@@ -20,8 +20,13 @@ fun main(args: Array<String>) {
 //    }
 //    println(text)
 
-    println(
-        "33 + 20 + 11 + 49 + -32 - 9 + 1 - 80 + 4".replace("\\s*".toRegex(), "").replace("(-\\+|\\+-)".toRegex(), "-")
-    )
+//    println(
+//        "33 + 20 + 11 + 49 + -32 - 9 + 1 - 80 + 4".replace("\\s*".toRegex(), "").replace("(-\\+|\\+-)".toRegex(), "-")
+//    )
+
+    val text = "c = 7 - 1 = = =  5"
+    val regex = Regex("=")
+    val matches = "=".toRegex().findAll(text).count() > 1
+    println(matches)
 
 }

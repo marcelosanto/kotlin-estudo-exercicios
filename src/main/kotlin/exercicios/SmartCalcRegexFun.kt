@@ -9,12 +9,21 @@ fun main() {
         val str = readln().trimEnd()
         if (str.isBlank()) {
             continue
+        } else if ("[a-zA-Z]+\\d+".toRegex().find(str)?.value != null) {
+            println("Invalid identifier")
+        } else if ("[a-zA-Z]+\\s*=\\s*([a-zA-Z]|\\d)+\\s*=\\s*([a-zA-Z]|\\d)+".toRegex()
+                .find(str)?.value != null || "[a-zA-Z]+\\s*=\\s*([a-zA-Z]+\\d+|\\d+[a-zA-Z]+)".toRegex()
+                .find(str)?.value != null || "=".toRegex().findAll(str).count() > 1
+        ) {
+            println("Invalid assignment")
         } else if (letras.find(str)?.value == null) {
             println(calculatorFunction(str))
         } else if (letras.find(str)?.value != null && "/[a-zA-Z]".toRegex().find(str)?.value == null) {
             if ("=".toRegex().find(str)?.value != null) {
                 val (x, y) = str.replace("\\s*".toRegex(), "").split("=")
-                if (listDeVariaveis[y] != null) {
+                if (listDeVariaveis[y] == null && "[a-zA-Z]".toRegex().find(y)?.value != null) {
+                    println("Unknown variable")
+                } else if (listDeVariaveis[y] != null) {
                     listDeVariaveis[x] = listDeVariaveis[y]!!.toInt()
                 } else listDeVariaveis[x] = y.toInt()
             } else {
@@ -113,7 +122,7 @@ fun calcNumbers(numbers: String): String {
     if (regexElev.find(numbers)?.value != null) {
         val (x, y) = regexElev.find(numbers)?.value?.replace("\\s*".toRegex(), "")?.split("^")!!.map { it.toInt() }
         val temp = regexElev.find(numbers)?.value
-        result = numbers.replace(temp!!, elevado(x, y).toString())
+        result = numbers.replace(temp!!, calcPow(x, y).toString())
 
     } else if (regexMulti.find(numbers)?.value != null) {
         val teste = regexMulti.find(numbers)?.value?.replace("\\s*".toRegex(), "")?.replace("*", " * ")?.split(" ")
@@ -144,7 +153,7 @@ fun calcNumbers(numbers: String): String {
     return result
 }
 
-fun elevado(x: Int, y: Int): Int {
+fun calcPow(x: Int, y: Int): Int {
     //valor x elevado
     var h = 1
 
@@ -178,4 +187,3 @@ fun sumWithParentheses(str: String, regex: Regex): String {
 
     return str.replace(parents!!, parentes)
 }
-
