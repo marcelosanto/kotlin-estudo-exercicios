@@ -135,7 +135,8 @@ fun calcNumbers(numbers: String): String {
     } else {
         val listInt = mutableListOf<Int>()
 
-        numbers.replace("\\s+".toRegex(), "").replace("-", ",-").replace("+", ",+").replace("^,".toRegex(), "")
+        numbers.replace("\\s+".toRegex(), "").replace("(-\\+|\\+-)".toRegex(), "-").replace("-", ",-")
+            .replace("+", ",+").replace("^,".toRegex(), "")
             .split(",").map { listInt.add(it.toInt()) }
 
         result = listInt.sum().toString()
