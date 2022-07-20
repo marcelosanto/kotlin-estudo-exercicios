@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="fix: corrigido o bug do +- na conta">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerDiv.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerLCM.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerSimpleExpression.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/SearchInList.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/fundamentos/TestandoFindAll.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/TestandoFindAll.kt" afterDir="false" />
     </list>
@@ -14,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -48,23 +53,30 @@
       <recent name="src.main.kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TestandoFindAllKt">
-    <configuration name="ProblemOfTodayKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.ProblemOfTodayKt" />
+  <component name="RunManager" selected="Kotlin.SearchInListKt">
+    <configuration name="BigIntegerDivKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerDivKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegexFun2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.RegexFun2Kt" />
+    <configuration name="BigIntegerLCMKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerLCMKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmartCalcRegexFunKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.SmartCalcRegexFunKt" />
+    <configuration name="BigIntegerSimpleExpressionKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerSimpleExpressionKt" />
+      <module name="kotlin-estudo-fundamentos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchInListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.SearchInListKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,13 +84,6 @@
     </configuration>
     <configuration name="TestandoFindAllKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.TestandoFindAllKt" />
-      <module name="kotlin-estudo-fundamentos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TheLongestWordKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.TheLongestWordKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,19 +99,19 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.main" />
+      <item itemvalue="Kotlin.SearchInListKt" />
+      <item itemvalue="Kotlin.BigIntegerDivKt" />
+      <item itemvalue="Kotlin.BigIntegerLCMKt" />
+      <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
       <item itemvalue="Kotlin.TestandoFindAllKt" />
-      <item itemvalue="Kotlin.TheLongestWordKt" />
-      <item itemvalue="Kotlin.SmartCalcRegexFunKt" />
-      <item itemvalue="Kotlin.ProblemOfTodayKt" />
-      <item itemvalue="Kotlin.RegexFun2Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.SearchInListKt" />
+        <item itemvalue="Kotlin.BigIntegerLCMKt" />
+        <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
+        <item itemvalue="Kotlin.BigIntegerDivKt" />
         <item itemvalue="Kotlin.TestandoFindAllKt" />
-        <item itemvalue="Kotlin.SmartCalcRegexFunKt" />
-        <item itemvalue="Kotlin.TheLongestWordKt" />
-        <item itemvalue="Kotlin.RegexFun2Kt" />
-        <item itemvalue="Kotlin.ProblemOfTodayKt" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657634556019</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix: corrigido o bug do +- na conta">
+      <created>1657636347742</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657636347742</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

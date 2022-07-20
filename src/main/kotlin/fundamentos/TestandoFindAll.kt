@@ -27,6 +27,7 @@ fun main(args: Array<String>) {
     val text = "c = 7 - 1 = = =  5"
     val regex = Regex("=")
     val matches = "=".toRegex().findAll(text).count() > 1
+    val y = readln().toBigInteger()
     println(matches)
 
 }
