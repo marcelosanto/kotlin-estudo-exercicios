@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="fix: corrigido o bug do +- na conta">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/generics.kt" afterDir="false" />
+    <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="estudo sobre generics">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/enum.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +15,7 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
@@ -49,14 +50,7 @@
       <recent name="src.main.kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.GenericsKt">
-    <configuration name="BigIntegerDivKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerDivKt" />
-      <module name="kotlin-estudo-fundamentos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.EnumKt">
     <configuration name="BigIntegerLCMKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerLCMKt" />
       <module name="kotlin-estudo-fundamentos" />
@@ -66,6 +60,13 @@
     </configuration>
     <configuration name="BigIntegerSimpleExpressionKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerSimpleExpressionKt" />
+      <module name="kotlin-estudo-fundamentos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnumKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.EnumKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,19 +96,19 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.main" />
+      <item itemvalue="Kotlin.EnumKt" />
       <item itemvalue="Kotlin.GenericsKt" />
       <item itemvalue="Kotlin.SearchInListKt" />
-      <item itemvalue="Kotlin.BigIntegerDivKt" />
       <item itemvalue="Kotlin.BigIntegerLCMKt" />
       <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.EnumKt" />
         <item itemvalue="Kotlin.GenericsKt" />
         <item itemvalue="Kotlin.SearchInListKt" />
         <item itemvalue="Kotlin.BigIntegerLCMKt" />
         <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
-        <item itemvalue="Kotlin.BigIntegerDivKt" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657636347742</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="estudo sobre generics">
+      <created>1660090673971</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660090673971</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +234,8 @@
     <MESSAGE value="melhorado o regex, conta com parenteses funcionando" />
     <MESSAGE value="fix: bug dos espaçoes" />
     <MESSAGE value="fix: corrigido o bug do +- na conta" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: corrigido o bug do +- na conta" />
+    <MESSAGE value="estudo sobre generics" />
+    <option name="LAST_COMMIT_MESSAGE" value="estudo sobre generics" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
