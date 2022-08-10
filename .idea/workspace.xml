@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="fix: corrigido o bug do +- na conta">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerDiv.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerLCM.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/BigIntegerSimpleExpression.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercicios/SearchInList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/generics.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/fundamentos/TestandoFindAll.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/TestandoFindAll.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -36,15 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marcelos/Downloads/kotlin-estudo-fundamentos&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.saveactions&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/marcelos/Downloads/kotlin-estudo-fundamentos",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -53,7 +49,7 @@
       <recent name="src.main.kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SearchInListKt">
+  <component name="RunManager" selected="Kotlin.GenericsKt">
     <configuration name="BigIntegerDivKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerDivKt" />
       <module name="kotlin-estudo-fundamentos" />
@@ -75,15 +71,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchInListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.SearchInListKt" />
+    <configuration name="GenericsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.GenericsKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestandoFindAllKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.TestandoFindAllKt" />
+    <configuration name="SearchInListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.SearchInListKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,19 +95,19 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.main" />
+      <item itemvalue="Kotlin.GenericsKt" />
       <item itemvalue="Kotlin.SearchInListKt" />
       <item itemvalue="Kotlin.BigIntegerDivKt" />
       <item itemvalue="Kotlin.BigIntegerLCMKt" />
       <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
-      <item itemvalue="Kotlin.TestandoFindAllKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GenericsKt" />
         <item itemvalue="Kotlin.SearchInListKt" />
         <item itemvalue="Kotlin.BigIntegerLCMKt" />
         <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
         <item itemvalue="Kotlin.BigIntegerDivKt" />
-        <item itemvalue="Kotlin.TestandoFindAllKt" />
       </list>
     </recent_temporary>
   </component>
@@ -231,5 +227,9 @@
     <MESSAGE value="fix: bug dos espaçoes" />
     <MESSAGE value="fix: corrigido o bug do +- na conta" />
     <option name="LAST_COMMIT_MESSAGE" value="fix: corrigido o bug do +- na conta" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
