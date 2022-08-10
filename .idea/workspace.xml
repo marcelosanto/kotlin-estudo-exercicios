@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c8e0e6-f789-4cca-85b6-b181d706ce41" name="Changes" comment="estudo sobre enum">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/enum.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/lambda2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/fundamentos/enum.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/enum.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/fundamentos/lambda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/lambda.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -39,15 +41,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/marcelos/Downloads/kotlin-estudo-fundamentos",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marcelos/Downloads/kotlin-estudo-fundamentos&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -55,17 +57,13 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="src.main.kotlin" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="src.main.kotlin.fundamentos" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.EnumKt">
+  <component name="RunManager" selected="Kotlin.Lambda2Kt">
     <configuration name="BigIntegerLCMKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerLCMKt" />
-      <module name="kotlin-estudo-fundamentos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BigIntegerSimpleExpressionKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.exercicios.BigIntegerSimpleExpressionKt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,6 +78,13 @@
     </configuration>
     <configuration name="GenericsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.GenericsKt" />
+      <module name="kotlin-estudo-fundamentos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lambda2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.kotlin.fundamentos.Lambda2Kt" />
       <module name="kotlin-estudo-fundamentos" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,19 +107,19 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.main" />
+      <item itemvalue="Kotlin.Lambda2Kt" />
       <item itemvalue="Kotlin.EnumKt" />
       <item itemvalue="Kotlin.GenericsKt" />
       <item itemvalue="Kotlin.SearchInListKt" />
       <item itemvalue="Kotlin.BigIntegerLCMKt" />
-      <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Lambda2Kt" />
         <item itemvalue="Kotlin.EnumKt" />
         <item itemvalue="Kotlin.GenericsKt" />
         <item itemvalue="Kotlin.SearchInListKt" />
         <item itemvalue="Kotlin.BigIntegerLCMKt" />
-        <item itemvalue="Kotlin.BigIntegerSimpleExpressionKt" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660091689001</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="estudo sobre enum">
+      <created>1660091699016</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660091699016</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

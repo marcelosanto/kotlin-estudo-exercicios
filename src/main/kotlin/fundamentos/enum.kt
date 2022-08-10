@@ -12,7 +12,6 @@ fun main() {
 fun getResul(result: Result) {
     return when (result) {
         Result.SUCCESS -> println("Success!")
-        Result.FAILURE -> println("Failure!")
         Result.ERROR -> println("Error!")
         Result.IDLE -> println("Idle!")
         Result.LOADING -> println("Loading!")
@@ -44,7 +43,6 @@ object Repository {
 
 enum class Result {
     SUCCESS,
-    FAILURE,
     ERROR,
     IDLE,
     LOADING
